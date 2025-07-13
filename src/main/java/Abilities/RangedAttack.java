@@ -17,14 +17,7 @@ public class RangedAttack implements Attack {
   public Integer attack(Monster target) {
     String message = attacker + " uses a ranged attack on " + target;
     System.out.println(message);
-    return null;
-  }
-
-  @Override
-  public Integer attack(Monster target) {
-    System.out.println(attacker + " uses a ranged attack on " + target);
     return attacker.getAgility() - target.getAgility();
   }
-
 }
 
