@@ -1,10 +1,12 @@
+package Monsters;
+
 import java.util.HashMap;
 import java.util.Objects;
 
 /**
  * Author: Jose Caicedo
  * Created on: 7/13/25
- * Description: Abstract Monster class
+ * Description: Abstract Monsters.Monster class
  */
 public abstract class Monster {
 
