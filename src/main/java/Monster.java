@@ -1,10 +1,19 @@
+import java.util.HashMap;
+
 /**
  * Author: Jose Caicedo Created on: 7/13/25 Description:
  */
-public class Monster(Integer maxHP, Integer xp, Hashmap<String, Integer> items) {
-    this.maxHP = maxHP;
-    this.xp = xp;
-    this.items = items;
+public class Monster(Integer maxHP, Integer xp, HashMap<String, Integer> items) {
+
+  protected Integer hp;
+  protected Integer xp = 10; // default
+  protected Integer maxHP;
+  protected HashMap<String, Integer> items;
+
+  this.maxHp = maxHP;
+  hp = this =this.maxHP;
+  this.xp = xp;
+  this.items = items;
 
   public Integer getHp() {
 
@@ -30,8 +39,6 @@ public class Monster(Integer maxHP, Integer xp, Hashmap<String, Integer> items) 
   public int hashCode() {
 
   }
-
-
 
 }
 
