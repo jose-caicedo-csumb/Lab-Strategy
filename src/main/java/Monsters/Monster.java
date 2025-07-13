@@ -2,6 +2,7 @@ package Monsters;
 
 import java.util.HashMap;
 import java.util.Objects;
+import java.util.Random;
 
 /**
  * Author: Jose Caicedo
@@ -66,7 +67,30 @@ public abstract class Monster {
   }
 
 
+  public Integer getAttribute(Integer min, Integer max) {
+    Random rand = new Random();
+    if (min > max) {
+      Integer temp = min;
+      min = max;
+      max = temp;
+    }
+    return rand.nextInt(max - min) + min;
+  }
 
+  public boolean takeDamage(Integer damage) {
+    if (damage > 0) {
+      System.out.println("The creature was hit for " + damage + " damage");
+      hp -= damage;
+    }
+
+    if (hp <= 0) {
+      System.out.println("Oh no! the creature has perished");
+      System.out.println(this);
+      return false;
+    }
+
+    return true;
+  }
 
 
   @Override
