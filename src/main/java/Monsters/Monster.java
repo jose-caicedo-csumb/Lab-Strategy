@@ -1,5 +1,6 @@
 package Monsters;
 
+import Abilities.Attack;
 import java.util.HashMap;
 import java.util.Objects;
 import java.util.Random;
@@ -91,6 +92,13 @@ public abstract class Monster {
 
     return true;
   }
+
+  public Integer attackTarget(Monster target) {
+    return target.takeDamage(attack.attack(target)) ? 1 : 0;
+  }
+
+
+
 
 
   @Override

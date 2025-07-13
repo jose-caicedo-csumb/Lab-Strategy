@@ -1,20 +1,26 @@
 package Monsters;
-
-import java.util.ArrayList;
+import Abilities.RangedAttack;
 import java.util.HashMap;
-import java.util.List;
 
-public class Driver {
-  public static void main(String[] args) {
-    HashMap<String, Integer> items = new HashMap<>();
-    items.put("gold", 5);
+/**
+ * Author: Jose Caicedo Created on: 7/13/25 Description:
+ */
+public class Kobold extends Monster {
+  public Kobold(Integer maxHP, Integer xp, HashMap<String, Integer> items) {
+    super(maxHP, xp, items);
 
-    List<Monster> monsters = new ArrayList<>();
-    monsters.add(new Imp(15, 20, items));
-    monsters.add(new Kobold(1, 5, items));
+    Integer maxStr = 8;
+    Integer maxDef = 5;
+    Integer maxAgi = 12;
 
-    for (Monster m : monsters) {
-      System.out.println(m);
-    }
+    attack = new RangedAttack(this);
+    str = super.getAttribute(str, maxStr);
+    def = super.getAttribute(def, maxDef);
+    agi = super.getAttribute(agi, maxAgi);
+  }
+
+  @Override
+  public String toString() {
+    return "Monsters.Kobold has : " + super.toString();
   }
 }

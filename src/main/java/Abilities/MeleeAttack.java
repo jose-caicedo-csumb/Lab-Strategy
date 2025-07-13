@@ -1,8 +1,10 @@
 package Abilities;
+import Monsters.Monster;
 
 /**
  * Author: Jose Caicedo Created on: 7/13/25 Description:
  */
+
 public class MeleeAttack implements Attack {
 
   Monster attacker;
@@ -13,9 +15,10 @@ public class MeleeAttack implements Attack {
 
   @Override
   public Integer attack(Monster target) {
-    String message = attacker + " uses a melee attack on " + target;
-    System.out.println(message);
-    return null;
+    System.out.println(attacker + " uses a melee attack on " + target);
+    return attacker.getStrength() - target.getDefense();
   }
+
+
 }
 

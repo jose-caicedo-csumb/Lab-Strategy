@@ -1,5 +1,7 @@
 package Abilities;
 
+import Monsters.Monster;
+
 /**
  * Author: Jose Caicedo Created on: 7/13/25 Description:
  */
@@ -17,5 +19,12 @@ public class RangedAttack implements Attack {
     System.out.println(message);
     return null;
   }
+
+  @Override
+  public Integer attack(Monster target) {
+    System.out.println(attacker + " uses a ranged attack on " + target);
+    return attacker.getAgility() - target.getAgility();
+  }
+
 }
 
