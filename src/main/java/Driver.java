@@ -1,3 +1,5 @@
+import Monsters.Imp;
+import Monsters.Monster;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

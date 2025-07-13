@@ -1,3 +1,5 @@
+package Monsters;
+
 import java.util.HashMap;
 
 /**
@@ -10,6 +12,6 @@ public class Imp extends Monster {
 
   @Override
   public String toString() {
-    return "Imp has : " + super.toString();
+    return "Monsters.Imp has : " + super.toString();
   }
 }

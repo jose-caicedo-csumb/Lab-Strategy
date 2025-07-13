@@ -1,24 +1,33 @@
+package Monsters;
+
 import java.util.HashMap;
 import java.util.Objects;
 
 /**
  * Author: Jose Caicedo
  * Created on: 7/13/25
- * Description: Abstract Monster class
+ * Description: Abstract Monsters.Monster class
  */
 public abstract class Monster {
 
   protected Integer hp;
   protected Integer xp = 10; // default
+
+  Integer agility = 10;
+  Integer defense = 10;
+  Integer strength = 10;
+  Attack attack;
+
   protected Integer maxHP;
   protected HashMap<String, Integer> items;
 
   public Monster(Integer maxHP, Integer xp, HashMap<String, Integer> items) {
     this.maxHP = maxHP;
-    hp = this.maxHP;
+    this.hp = maxHP;
     this.xp = xp;
     this.items = items;
   }
+
 
   public Integer getHp() {
     return hp;
@@ -43,6 +52,22 @@ public abstract class Monster {
   public Integer getMaxHP() {
     return maxHP;
   }
+
+  public Integer getAgility() {
+    return agility;
+  }
+
+  public Integer getDefense() {
+    return defense;
+  }
+
+  public Integer getStrength() {
+    return strength;
+  }
+
+
+
+
 
   @Override
   public boolean equals(Object o) {
