@@ -6,9 +6,7 @@ import java.util.Objects;
 import java.util.Random;
 
 /**
- * Author: Jose Caicedo
- * Created on: 7/13/25
- * Description: Abstract Monsters.Monster class
+ * Author: Jose Caicedo Created on: 7/13/25 Description: Abstract Monsters.Monster class
  */
 public abstract class Monster {
 
@@ -82,6 +80,9 @@ public abstract class Monster {
     if (damage > 0) {
       System.out.println("The creature was hit for " + damage + " damage");
       hp -= damage;
+      if (hp < 0) {
+        hp = 0;
+      }
     }
 
     if (hp <= 0) {
@@ -98,13 +99,14 @@ public abstract class Monster {
   }
 
 
-
-
-
   @Override
   public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
     Monster monster = (Monster) o;
     return Objects.equals(hp, monster.hp) &&
         Objects.equals(xp, monster.xp) &&
