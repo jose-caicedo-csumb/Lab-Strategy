@@ -1,5 +1,4 @@
 package Abilities;
-
 import Monsters.Monster;
 
 /**
