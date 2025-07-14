@@ -7,7 +7,7 @@
 
 package Abilities;
 
-import Monsters.Monster;
+import monsters.Monster;
 
 /**
  * RangedAttack is a type of Attack that uses agility to determine damage.

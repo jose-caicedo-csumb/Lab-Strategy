@@ -8,7 +8,7 @@
 
 package Abilities;
 
-import Monsters.Monster;
+import monsters.Monster;
 
 /**
  * Attack defines a method that any implementing class must use to attack a target Monster.

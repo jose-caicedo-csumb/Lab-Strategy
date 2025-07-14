@@ -8,7 +8,7 @@
 
 package Abilities;
 
-import Monsters.Monster;
+import monsters.Monster;
 
 /**
  * MeleeAttack is a concrete implementation of the Attack interface.
